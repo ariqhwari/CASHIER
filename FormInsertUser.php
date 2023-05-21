@@ -49,8 +49,8 @@
                             <td>
                                 <select name = "type_user">
                                     <option value="">Choose Type</option>
-                                    <option value="kasir">kasir</option>
-                                    <option value="gudang">gudang</option>
+                                    <option value="kasir">cashier</option>
+                                    <option value="gudang">warehouse</option>
                                 </select>
                         </tr>
             </table>
