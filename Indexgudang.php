@@ -1,3 +1,13 @@
+<?php include 'conn.php';?>
+<?php 
+//jika tidak ada session user maka ke login
+  if (!isset ($_SESSION['user']))
+  {
+    echo "<script>alert('Anda harus login!')</script>";
+    echo "<script>location='index.php'</script>";
+    exit();
+  }
+  ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,7 +31,7 @@
   <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
+      <a class="nav-link px-3" href="index.php?page=logout">Sign out</a>
     </div>
   </div>
 </header>
@@ -38,37 +48,37 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="supplier.php">
               <span data-feather="file" class="align-text-bottom"></span>
-              Orders
+              Supplier
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="product.php">
               <span data-feather="shopping-cart" class="align-text-bottom"></span>
               Products
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="customer.php">
               <span data-feather="users" class="align-text-bottom"></span>
               Customers
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="kategori.php">
               <span data-feather="bar-chart-2" class="align-text-bottom"></span>
              Kategori
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="penjualan.php">
               <span data-feather="bar-chart-2" class="align-text-bottom"></span>
               Penjualan
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="reports.php">
               <span data-feather="bar-chart-2" class="align-text-bottom"></span>
               Reports
             </a>
@@ -112,8 +122,33 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4>
       <div class="bg-white">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut reiciendis nisi unde tempora culpa sunt voluptates aperiam reprehenderit. Commodi sed corrupti quam eius esse quasi voluptates itaque aut, aperiam quis!
-      </div>
+        <?php 
+        if (!isset ($_GET['page']))
+        {
+          include 'dashboard.php';
+        }
+        else
+        {
+          if ($_GET['page']=="supplier")
+          {
+           include 'supplier.php';
+          }
+          elseif ($_GET['page']=='kategori')
+           {
+           include 'kategori.php';
+          }
+          elseif ($_GET['page']=='product')
+          {
+          include 'product.php';
+         }
+         elseif ($_GET['page']=='logout')
+          {
+          include 'logout.php';
+         }
+
+        }
+        ?>
+    </div>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
