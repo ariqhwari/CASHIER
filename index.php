@@ -25,13 +25,13 @@
                 <form action="" method="post">
                     <div class="mb-3">
                         <label for="">E-mail</label>
-                        <input type="email" name="email" class="form-control">
+                        <input type="email" name="email" class="form-control" style="background-color:#BD8B8B">
                     </div>
                     <div class="mb-3">
                         <label for="">Password</label>
-                        <input type="password" name="password" class="form-control">
+                        <input type="password" name="password" class="form-control" style="background-color:#BD8B8B">
                     </div>
-                    <button class="btn btn-primary" name="login">Login</button>
+                    <button class="btn btn-primary" name="login" style="background-color:#7D1A1A">Login</button>
                 </form>
             </div>
         </div>
