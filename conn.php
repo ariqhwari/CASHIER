@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "dbshop");
+$mysqli = new mysqli("localhost", "root", "", "dbshop","3307");
 
 // Periksa Koneksi
 if ($mysqli->connect_errno) {

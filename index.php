@@ -31,7 +31,7 @@
                         <label for="">Password</label>
                         <input type="password" name="password" class="form-control">
                     </div>
-                    <button class="btn btn-primary">Login</button>
+                    <button class="btn btn-primary" name="login">Login</button>
                 </form>
             </div>
         </div>
@@ -42,3 +42,30 @@
 </body>
 
 </html>
+
+<?php
+    include ('conn.php');
+    if (isset($_POST["login"])){
+        $email = $_POST["email"];
+        $password = ($_POST["password"]);
+
+        $get_user = $mysqli->query("SELECT * FROM user WHERE email_user = '$email' AND password_user = '$password'");
+        $user_check = $get_user->fetch_assoc();
+
+        if (empty($user_check)){
+            echo "<script>alert('account not registered!')</script)";
+            // echo "<script>location=</script>";
+        }else {
+            $_SESSION["user"] = $user_check;
+            
+            if ($user_check["type_user"]=="kasir"){
+                echo "<script>alert('success')</script)";
+                // echo "<script>location=</script>";
+            }else if ($user_check["type_user"]=="gudang"){
+                echo "<script>alert('success')</script)";
+                echo "<script>location='Indexgudang.php'</script>";
+            }
+        }
+
+    }
+?>
