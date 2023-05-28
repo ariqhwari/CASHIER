@@ -1,8 +1,9 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "dbshop");
+session_start();
+$conn = new mysqli("localhost", "ariq", "", "dbshop");
 
 // Periksa Koneksi
-if ($mysqli->connect_errno) {
-  echo "Gagal menghubungkan ke MySQL: " . $mysqli->connect_error;
+if ($conn->connect_errno) {
+  echo "Gagal menghubungkan ke MySQL: " . $conn->connect_error;
   exit();
 }
