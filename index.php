@@ -29,11 +29,11 @@ include 'conn.php';
                 <form action="" method="post">
                     <div class="mb-3">
                         <label for="">E-mail</label>
-                        <input type="email" name="email" class="form-control">
+                        <input type="email" name="email" class="form-control" style="background-color:#BD8B8B">
                     </div>
                     <div class="mb-3">
                         <label for="">Password</label>
-                        <input type="password" name="password" class="form-control">
+                        <input type="password" name="password" class="form-control" style="background-color:#BD8B8B">
                     </div>
                     <button class="btn btn-danger" name="login">Login</button>
                 </form>
@@ -61,10 +61,10 @@ if (isset($_POST['login'])) {
     } else {
         $_SESSION['user'] = $check_user;
         if ($check_user['type_user'] == "kasir") {
-            echo "<script>alert('Selamat Datang')</script>";
+            echo "<script>alert('Welcome')</script>";
             echo "<script>location='cashier/index.php'</script>";
         } elseif ($check_user['type_user'] == "gudang") {
-            echo "<script>alert('Selamat Datang')</script>";
+            echo "<script>alert('Welcome')</script>";
             echo "<script>location='warehouse/index.php'</script>";
         }
     }

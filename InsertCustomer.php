@@ -4,7 +4,7 @@
                 // $link = 
                 $name_customer = $_POST["name_customer"];
                 $email_customer = $_POST["email_customer"];
-                $address_customer = $_POST["address_-customer"];
+                $address_customer = $_POST["address_customer"];
                 
                 $insert = "INSERT INTO customer (name_customer,email_customer,address_customer) VALUES ('$name_customer','$email_customer',' $address_customer')";
                 $result = $mysqli->query($insert);
