@@ -1,3 +1,5 @@
+<?php include '../conn.php'; ?>
+
 <div class="my-3 card border-0 shadow">
     <div class="card-header bg-danger text-white">PRODUCT</div>
     <div class="card-body">
@@ -31,7 +33,7 @@
                         <?php echo $data['quantity_product']; ?>
                     </td>
                     <td>
-                        <a href="#" class="btn btn-danger">Update</a>
+                        <?php echo "<a  href='product_edit.php?id=".$data['id_product']."'>Update</a>"; ?>
                         <a href="#" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
