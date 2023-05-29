@@ -17,6 +17,7 @@ if (isset($_POST['submit'])) {
 
     if ($conn->query($query) === TRUE) {
         echo "Data berhasil diupdate.";
+        echo '<br><br><a href="product.php">Lihat Data</a>';
     } else {
         echo "Error: " . $query . "<br>" . $conn->error;
     }
