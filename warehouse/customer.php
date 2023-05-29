@@ -1,5 +1,5 @@
 <div class="my-3 card border-0 shadow">
-    <div class="card-header bg-danger text-white">Customers</div>
+    <div class="card-header bg-danger text-white">CUSTOMER</div>
     <div class="card-body">
         <table class="table">
             <thead>
@@ -8,7 +8,7 @@
                     <th>Name Customer</th>
                     <th>E-mail Customer</th>
                     <th>Address Customer</th>
-                    <th>Opsi</th>
+                    <th>Edit</th>
                 </tr>
             </thead>
             <?php

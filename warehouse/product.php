@@ -1,14 +1,14 @@
 <div class="my-3 card border-0 shadow">
-    <div class="card-header bg-danger text-white">Produk</div>
+    <div class="card-header bg-danger text-white">PRODUCT</div>
     <div class="card-body">
         <table class="table">
             <thead>
                 <tr>
                     <th>Id product</th>
-                    <th>product</th>
+                    <th>Product</th>
                     <th>Price</th>
                     <th>Quantity</th>
-                    <th>Opsi</th>
+                    <th>Edit</th>
                 </tr>
             </thead>
             <?php

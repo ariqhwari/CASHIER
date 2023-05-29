@@ -1,12 +1,12 @@
 <div class="my-3 card border-0 shadow">
-    <div class="card-header bg-danger text-white">KATEGORI</div>
+    <div class="card-header bg-danger text-white">CATEGORY</div>
     <div class="card-body">
         <table class="table">
             <thead>
                 <tr>
                     <th>Id Category</th>
                     <th>Category</th>
-                    <th>Opsi</th>
+                    <th>Edit</th>
                 </tr>
             </thead>
             <?php

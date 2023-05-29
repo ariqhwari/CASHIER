@@ -9,7 +9,7 @@
                     <th>Order Date</th>
                     <th>Name Customer</th>
                     <th>Total</th>
-                    <th>Opsi</th>
+                    <th>Option</th>
                 </tr>
             </thead>
             <?php
