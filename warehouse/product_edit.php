@@ -1,6 +1,5 @@
 <?php
 include '../conn.php';
-//require 'conn.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
