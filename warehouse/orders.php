@@ -1,5 +1,5 @@
 <div class="my-3 card border-0 shadow">
-    <div class="card-header bg-danger text-white">Customers</div>
+    <div class="card-header bg-danger text-white">ORDER</div>
     <div class="card-body">
         <table class="table">
             <thead>
