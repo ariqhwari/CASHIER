@@ -32,3 +32,4 @@
         </table>
     </div>
 </div>
+<a href="form_category_warehouse.php" class="btn btn-danger">Add Category</a>
