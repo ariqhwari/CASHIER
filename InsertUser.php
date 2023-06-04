@@ -8,7 +8,7 @@
                 $type_user = $_POST["type_user"];
                 
                 $insert = "INSERT INTO user (name_user,email_user,password_user,type_user) VALUES ('$name_user','$email_user','$password_user','$type_user')";
-                $result = $mysqli->query($insert);
+                $result = $conn->query($insert);
             }
             if($result == TRUE){
                 echo "<h2>insert data SUCCESS</h2>";
