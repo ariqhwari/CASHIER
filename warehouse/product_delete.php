@@ -18,4 +18,3 @@ if ($conn->query($query) === TRUE) {
 echo '<br><br><a href="product.php">Lihat Data</a>';
 
 $conn->close();
-?>

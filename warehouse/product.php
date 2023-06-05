@@ -1,5 +1,3 @@
-<?php include '../conn.php'; ?>
-
 <div class="my-3 card border-0 shadow">
     <div class="card-header bg-danger text-white">PRODUCT</div>
     <div class="card-body">
@@ -27,15 +25,16 @@
                         <?php echo $data['name_product']; ?>
                     </td>
                     <td>
-                        <?php echo $data['price_product']; ?>
+                        <?php echo number_format($data['price_product']); ?>
                     </td>
                     <td>
                         <?php echo $data['quantity_product']; ?>
                     </td>
                     <td>
-                        <?php echo "<a  href='product_edit.php?id=".$data['id_product']."'>Update</a>"; ?>
+                        <?php echo "<a href='product_edit.php?id=" . $data['id_product'] . "' class='btn btn-danger'>Update</a>"; ?>
                         <a href="#" class="btn btn-danger">Delete</a>
                     </td>
+
                 </tr>
                 <?php endwhile ?>
             </tbody>
