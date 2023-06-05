@@ -1,62 +1,66 @@
-body {
-    background-color: lightgray;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.container {
+h4{
+    font-family: 'Arial';
+}
+
+.content{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+}
+.container{
+    margin-top: 10em;
+    border: 2px solid white ;
+    padding: 35px 60px;
+    border-radius: 10px;
+    box-shadow: 0 10px 100px rgb(185, 178, 178);
 }
 
-.tittle-logo {
-    background-color: white;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-    padding: 2.5rem;
-    border-radius: 0.25rem;
-    width: 100%;
-    max-width: 400px;
-}
-
-.tittle {
+.name{
     text-align: center;
-    color: #7D1A1A;
-    margin-bottom: 1.5rem;
 }
 
-.logo {
+.logo{
     text-align: center;
-    margin-bottom: 1.5rem;
 }
 
-.content {
-    margin-bottom: 1.5rem;
+.input {
+    margin-bottom: 10px;
 }
 
-.content label {
+.input label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 5px;
 }
 
-.email,
-.password {
+.input input[type="email"],
+.input input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
     background-color: #BD8B8B;
-    width: 100%;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    padding: .375rem .75rem;
-    color: #333;
+    color: black;
 }
 
-button[name="login"] {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    width: 100%;
-    padding: .375rem .75rem;
-    cursor: pointer;
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-}
+    background-color: maroon;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #be5757;
+  }
+  

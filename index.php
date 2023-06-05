@@ -1,5 +1,5 @@
 <?php
-    include ('conn.php');
+include('conn.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,30 +12,30 @@
     <title>Login</title>
     <link rel="icon" href="src/logo.png" type="image">
     <!-- 👇 css 👇 -->
-    <link rel="stylesheet" href="src/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
 </head>
 
-<body class="bg-light">
+<body class="content">
     <!-- auto responsive navigation bar -->
-    <nav id="navbar" class="navibar">
+    <nav id="navbar" class="navbar">
     </nav>
 
     <!-- 👇 content 👇 -->
-    <div class="container mt-5">
+    <div class="container">
         <div class="row">
-            <div class="col-md-4 offset-md-4 bg-white shadow p-5">
-                <h4 class="text-center" style="color:#7D1A1A"><b>$mallCashier</b></h4>
-                <div class="text-center"><img src="src/img/logo.png" width="120"></div>
+            <div class="headerContent">
+                <h4 class="name" style="color:#7D1A1A"><b>$mallCashier</b></h4>
+                <div class="logo"><img src="src/img/logo.png" width="120"></div>
                 <form action="" method="post">
-                    <div class="mb-3">
+                    <div class="input">
                         <label for="">E-mail</label>
-                        <input type="email" name="email" class="form-control" style="background-color:#BD8B8B">
+                        <input type="email" name="email" class="form" style="background-color:#BD8B8B">
                     </div>
-                    <div class="mb-3">
+                    <div class="input">
                         <label for="">Password</label>
-                        <input type="password" name="password" class="form-control" style="background-color:#BD8B8B">
+                        <input type="password" name="password" class="form" style="background-color:#BD8B8B">
                     </div>
-                    <button class="btn btn-danger" name="login">Login</button>
+                    <button class="button" name="login">Login</button>
                 </form>
             </div>
         </div>

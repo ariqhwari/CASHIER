@@ -1,6 +1,6 @@
-<div class="my-3 card border-0 shadow">
-    <div class="card-header bg-danger text-white">CATEGORY</div>
-    <div class="card-body">
+<div class="contents">
+    <div class="content-tittle">CATEGORY</div>
+    <div class="content-dashboard">
         <table class="table">
             <thead>
                 <tr>

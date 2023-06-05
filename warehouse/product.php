@@ -1,5 +1,3 @@
-<?php include '../conn.php'; ?>
-
 <?php
 
 if (isset($_POST['submit'])) {
@@ -19,9 +17,9 @@ if (isset($_POST['submit'])) {
 // $conn->close();
 ?>
 
-<div class="my-3 card border-0 shadow">
-    <div class="card-header bg-danger text-white">PRODUCT</div>
-    <div class="card-body">
+<div class="contents">
+    <div class="content-tittle">PRODUCT</div>
+    <div class="content-dashboard">
         <table class="table">
             <thead>
                 <tr>
