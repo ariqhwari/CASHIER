@@ -15,19 +15,35 @@ if (isset($_SESSION['keranjang'])) {
 ?>
 
 <?php foreach ($keranjang as $key => $data) : ?>
-    <div>
+    <div class="row">
+        <div class="col-md-9">
         <h6><?php echo $data['name_product']; ?></h6>
-        <span><?php echo number_format($data['price_product']); ?> x <?php echo $data['jumlah'] ?></span>
+        <span class="small text-muted"><?php echo number_format($data['price_product'])?></span>
+        <p class="small">X <?php echo $data['jumlah']?></p>
     </div>
+    <div class="col-md-3">
+        <div>
+            <i class="bi bi-plus tambahi" idnya="<?php echo $data['id_product']?>"></i>
+        </div>  
+        <div>
+          <i class="bi bi-dash kurangi" idnya="<?php echo $data['id_product']?>" ></i>
+        </div>
+    </div>>
+</div>
+
 <?php endforeach ?>
 
 <form method="post">
-    <div class="total">
-        <div class="coolinput">
-            <label for="" class="text">Total</label>
-            <input type="number" name="total" class="input" value="<?php echo $total ?>" readonly>
-        </div>
+    <div class="mb-3">
+        <label>Total</label>
+        <input type="number" name="total" class="input" value="<?php echo $total ?>" readonly>
     </div>
+    <div class="mb-3"></div>
+        <label>Bayar</label>
+        <input type="number" name="total" class="form-control" value="<?php echo $total ?>" readonly >
+    </div>
+      <button class="btn btn-primary btn-sm">Checkout</button>
+    
 </form>
 
 <style>
