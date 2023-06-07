@@ -58,5 +58,7 @@ foreach ($_SESSION['keranjang'] ?? [] as $id_product => $jumlah) {
 //kosongkan keranjang
 unset($_SESSION['keranjang']);
 
+//larikan ke halaman nota
+echo "<script>location='nota.php?id=$id_sales'</script>"
 
 ?>
