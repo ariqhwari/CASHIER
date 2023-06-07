@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = new mysqli("localhost", "ariq", "", "dbshop");
+$conn = new mysqli("localhost", "root", "", "dbshop");
 
 // Periksa Koneksi
 if ($conn->connect_errno) {
