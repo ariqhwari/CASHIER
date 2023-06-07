@@ -38,31 +38,34 @@ $conn->close();
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Edit Product</title>
+    <link rel="stylesheet" href="../src/css/editproduct.css">
 </head>
+
 <body>
-    <h1>Edit Product</h1>
-    <form method="POST" action="">
-        <table>
-            <input type="hidden" name="id" value="<?php echo $data['id_product']; ?>">
-            <tr>
-                <td><label for="product">Product </label></td>
-                <td><input type="text" name="name_product" value="<?php echo $data['name_product']; ?>"><br></td>
-            </tr>
-            <tr>
-                <td><label for="price">Price </label></td>
-                <td><input type="text" name="price_product" value="<?php echo $data['price_product']; ?>"><br></td>
-            </tr>
-            <tr>
-                <td><label for="quantity">Quantity </label></td>
-                <td><input type="text" name="quantity_product" value="<?php echo $data['quantity_product']; ?>"><br></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" name="submit" value="Update"></td>
-            </tr>
-        </table>
+    <form class="form" method="POST" action="">
+        <p class="title">Edit Product </p>
+        <label>
+            <input type="hidden" name="id" class="input" value="<?php echo $data['id_product']; ?>">
+            <span>Id Product</span>
+        </label>
+
+        <label for="product">
+            <input type="text" name="name_product" class="input" value="<?php echo $data['name_product']; ?>">
+            <span>Name product</span>
+        </label>
+        <label for="price">
+            <input type="text" class="input" name="price_product" value="<?php echo $data['price_product']; ?>">
+            <span>Price</span>
+        </label>
+        <label for="quantity">
+            <input type="text" name="quantity_product" class="input" value="<?php echo $data['quantity_product']; ?>">
+            <span>Quantity</span>
+        </label>
+        <button class="submit" type="submit" name="submit">Submit</button>
     </form>
 </body>
+
 </html>

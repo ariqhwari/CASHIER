@@ -17,8 +17,9 @@ if (!isset($_SESSION['user'])) {
     <link
         href="https://fonts.googleapis.com/css2?family=Geologica&family=Lora:ital,wght@0,500;1,400&family=Poppins:wght@300;600&display=swap"
         rel="stylesheet">
-
-    <link href="../src/css/dashboard.css" rel="stylesheet">
+    <link rel="icon" href="../src/img/logo.png" type="image">
+    <!-- CSS -->
+    <link href="../src/css/index-warehouse.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,11 +27,13 @@ if (!isset($_SESSION['user'])) {
     <header>
         <a class="tittle" href="#">$MALL CASHIER</a>
         <input class="navbar-search" type="text" placeholder="Search" aria-label="Search">
-        <div class="navbar-nav">
-            <div class="nav-item">
-                <a class="signout" href="index.php?page=logout">Sign out</a>
-            </div>
-        </div>
+        <button class="signouts" onclick="location.href='index.php?page=logout'">
+            <p>Logout</p>
+            <svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+        </button>
     </header>
 
     <div class="container">

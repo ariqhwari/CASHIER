@@ -10,7 +10,7 @@ include('conn.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Login</title>
-    <link rel="icon" href="src/logo.png" type="image">
+    <link rel="icon" href="src/img/logo.png" type="image">
     <!-- 👇 css 👇 -->
     <link rel="stylesheet" href="src/css/style.css" />
 </head>

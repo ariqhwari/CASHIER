@@ -8,27 +8,8 @@ body {
 	border:0;
 	outline:0;
 	font-size:100%;
-  font-family: 'Poppins', Helvetica, sans-serif;
+  font-family: 'Poppins', 'Lora', sans-serif;
 	vertical-align:baseline;
-}
-
-.feather {
-  width: 16px;
-  height: 16px;
-}
-
-/*
- * Sidebar
- */
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  padding: 48px 0 0; 
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
 
 header {
@@ -38,36 +19,94 @@ header {
   padding: 10px 20px;
   background-color: #dc3545;
 }
-
+/* tittle Navbar*/
 .tittle {
   font-size: 24px;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   font-family:'Geologica';
 }
 
+/* Search Navbar */
 .navbar-search {
   width: 100vh;
   box-sizing: border-box;
+  max-width: 500px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fafafa;
 }
 
-
-.signout {
-  padding: 5px 10px;
-  background-color: #15f115;
-  color: #000000;
-  text-decoration: none;
-  border-radius: 4px;
+/* Logout Navbar */
+.signouts {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
 }
 
-.signout:hover {
-  background-color: #c82333;
+.signouts {
+  --primary-color: #ffffff;
+  --hovered-color: #fbff01;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
 }
 
+.signouts p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color)
+}
+
+.signouts::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.signouts p::before {
+  position: absolute;
+  content: "Logout";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.signouts:hover::after {
+  width: 100%;
+}
+
+.signouts:hover p::before {
+  width: 100%;
+}
+
+.signouts:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color)
+}
+
+.signouts svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
+/* sidebar */
 .row {
   flex: 1;
   display: flex;
@@ -79,13 +118,14 @@ header {
   padding: 20px;
   box-shadow: 0 10px 20px rgb(185, 178, 178);
 }
-
+/* Name user Sidebar */
 .name-user h6 {
   font-size: 16px;
   color: #333;
   margin-bottom: 10px;
 }
 
+/* sidebar list Menu */
 .sidebarMenu {
   display: flex;
   flex-direction: column;
@@ -108,12 +148,6 @@ header {
   color: #333;
 }
 
-.report {
-  padding: 10px;
-  background-color: #f0f0f0;
-  margin-top: auto;
-}
-
 .nav-link {
   text-decoration: none;
   color: #333;
@@ -131,12 +165,15 @@ header {
   margin-bottom: 10px;
 }
 
+/* content */
 .contents{
-  margin: 35px;
-  border: 2px solid white ;
-    padding: 10px 15px;
-    border-radius: 10px;
-    box-shadow: 0 10px 100px rgb(185, 178, 178);
+  margin: 30px;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 20px 20px 40px #c5c5c5, -20px -20px 40px #ffffff;
+  transition: 0.3s;
 }
 
 .content-dashboard {
@@ -147,14 +184,10 @@ header {
 .content-tittle {
   font-size: 24px;
   font-weight: bold;
-
   padding: 20px;
 }
 
-.content-customer {
-  margin-bottom: 20px;
-}
-
+/* Table */
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -201,3 +234,41 @@ header {
   border-color: #c82333;
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar-search {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  .contents {
+    margin: 10px;
+    padding: 0.5rem;
+  }
+
+  .content-tittle {
+    padding: 10px;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px;
+  }
+
+  .table a {
+    padding: 6px 10px;
+    font-size: 12px;
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+  }
+
+}

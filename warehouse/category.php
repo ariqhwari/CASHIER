@@ -14,22 +14,22 @@
             $result = mysqli_query($conn, $query);
             ?>
             <?php while ($data = mysqli_fetch_array($result)) : ?>
-                <tbody>
-                    <tr>
-                        <td>
-                            <?php echo $data['id_category']; ?>
-                        </td>
-                        <td>
-                            <?php echo $data['name_category']; ?>
-                        </td>
-                        <td>
-                            <a href="#" class="btn btn-danger">Update</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </td>
-                    </tr>
+            <tbody>
+                <tr>
+                    <td>
+                        <?php echo $data['id_category']; ?>
+                    </td>
+                    <td>
+                        <?php echo $data['name_category']; ?>
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-danger">Update</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
                 <?php endwhile ?>
-                </tbody>
+            </tbody>
         </table>
+        <a href="form_category_warehouse.php" class="btn btn-danger">Add Category</a>
     </div>
 </div>
-<a href="form_category_warehouse.php" class="btn btn-danger">Add Category</a>
