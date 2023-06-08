@@ -5,7 +5,7 @@
 if (isset($_POST['submit'])) {
     $name_user = $_POST["name_user"];
     $email_user = $_POST["email_user"];
-    $password_user= $_POST["password_user"];
+    $password_user = sha1($_POST["password_user"]);
     $type_user = $_POST["type_user"];
 
     $query = "INSERT INTO user (name_user, email_user, password_user,type_user) VALUES ('$name_user', '$email_user', '$password_user', '$type_user')";
