@@ -37,7 +37,7 @@
                                 </label>
                             </td>
                             <td>
-                                <input type = "text" name = "password_user"/>
+                                <input type = "password" name = "password_user"/>
                             </td>
                         </tr>
                         <tr>
