@@ -6,7 +6,7 @@
                 $email_customer = $_POST["email_customer"];
                 $address_customer = $_POST["address_customer"];
                 
-                $insert = "INSERT INTO customer (name_customer,email_customer,'address_-customer') VALUES ('$name_customer','$email_customer',' $address_customer')";
+                $insert = "INSERT INTO customer (name_customer,email_customer,address_customer) VALUES ('$name_customer','$email_customer',' $address_customer')";
                 $result = $conn->query($insert);
 
                 if ($result === TRUE) {
@@ -25,7 +25,7 @@
 ?>
 
 <div class="contents">
-    <div class="content-tittle">CATEGORY</div>
+    <div class="content-tittle">CUSTOMER</div>
     <div class="content-dashboard">
     <table class="table">
             <thead>
@@ -54,7 +54,7 @@
                             <?php echo $data['email_customer']; ?>
                         </td>
                         <td>
-                            <?php echo $data['address_-customer']; ?>
+                            <?php echo $data['address_customer']; ?>
                         </td>
                         <td>
                             <a href="customer_update.php" class="btn btn-danger">Update</a>
