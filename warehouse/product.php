@@ -1,4 +1,5 @@
 <?php
+include '../conn.php';
 
 if (isset($_POST['submit'])) {
     $product = $_POST['name_product'];
@@ -59,7 +60,7 @@ if (isset($_POST['submit'])) {
             </tbody>
         </table>
         <tr>
-            <td><br><br><?php echo "<a href='product_form.php'>Tambahkan Data</a>"; ?></td>
+            <td><br><br><?php echo "<a href='product_form.php'>Add Product</a>"; ?></td>
         </tr>
     </div>
 </div>

@@ -1,31 +1,33 @@
+<?php
+include '../conn.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tambah Product</title>
+    <link rel="stylesheet" href="../src/css/form.css"/>
 </head>
-<body>
-    <h1>Tambah Product</h1>
-    <form method="POST" action="product.php">
-        <table>
-                
-                <tr>
-                    <td><label for="product">Product </label></td>
-                    <td><input type="text" name="name_product"></td>
-                </tr>
-                <tr>
-                    <td><label for="price">Price </label></td>
-                    <td><input type="text" name="price_product"></td>
-                </tr>
-                <tr>
-                    <td><label for="quantity">Quantity </label></td>
-                    <td><input type="text" name="quantity_product"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Add"></td>
-                </tr>
-            </table>
-    </form>
-    <br><br><?php echo "<a href='product.php'>Lihat Data</a>";?>
+
+<body >
+    <div class="kotak_login">
+        <p class="tulisan_login" style="color:#7D1A1A"><b>Tambah Product</b></p>
+
+        <form method="POST" action="product.php">
+            
+            <label for="product">Product </label>
+            <input type="text" name="name_product" class="form_login" placeholder="Product name">
+
+            <label for="price">Price </label>
+            <input type="text" name="price_product" class="form_login" placeholder="Price Product">
+
+            <label for="quantity">Quantity </label>
+            <input type="text" name="quantity_product" class="form_login" placeholder="Quantity Product">
+
+            <input type="submit" name="submit" value="Add" class="tombol_login">
+        </form>
+        <center><?php echo "<a href='index.php?page=product'>Lihat Data</a>";?></center>
+    </div>
+    
 </body>
 </html>
