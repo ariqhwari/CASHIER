@@ -44,3 +44,5 @@ if (!isset($_SESSION['user'])) {
             </button>
         </div>
     </nav>
+</body>
+

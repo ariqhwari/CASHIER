@@ -9,7 +9,7 @@
 <body>
     <h2>Customer</h2>
             <table>
-                    <form action = "insertCustomer_cashier.php" method = "POST">
+                    <form action = "customer.php" method = "POST">
                         <tr>
                             <td>
                                 <label for = "name_customer">

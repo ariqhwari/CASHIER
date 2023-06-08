@@ -9,7 +9,7 @@
 <body>
     <h2>Category</h2>
             <table>
-                    <form action = "insertCategory_warehouse.php" method = "POST">
+                    <form action = "category.php" method = "POST">
                         <tr>
                             <td>
                                 <label for = "name_category">

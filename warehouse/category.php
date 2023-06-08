@@ -1,3 +1,23 @@
+<?php
+    include '../conn.php';
+            if($_POST["submit"]=="Submit"){
+                // $link = 
+                $name_category = $_POST["name_category"];
+                
+                $insert = "INSERT INTO category (name_category) VALUES ('$name_category')";
+                $result = $conn->query($insert);
+
+                if ($result === TRUE) {
+                    echo "New record created successfully";
+                  } else {
+                    echo "Error: " . $insert . "<br>" . $conn->error;
+                  }
+            }
+            // if($result == TRUE){
+            //     echo "<h2>insert data SUCCESS</h2>";
+            //     // echo "<a href = \"$link\">show data</a>";
+            // }
+?>
 <div class="contents">
     <div class="content-tittle">CATEGORY</div>
     <div class="content-dashboard">
@@ -23,13 +43,13 @@
                         <?php echo $data['name_category']; ?>
                     </td>
                     <td>
-                        <a href="#" class="btn btn-danger">Update</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
+                        <a href="category_update.php" class="btn btn-danger">Update</a>
+                        <a href="category_delete.php" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <?php endwhile ?>
             </tbody>
         </table>
-        <a href="form_category_warehouse.php" class="btn btn-danger">Add Category</a>
+        <a href="category_form.php" class="btn btn-danger">Add Category</a>
     </div>
 </div>
