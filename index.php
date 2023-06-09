@@ -24,7 +24,7 @@ include('conn.php');
     <div class="container">
         <div class="row">
             <div class="headerContent">
-                <h4 class="name" style="color:#7D1A1A"><b>$mallCashier</b></h4>
+                <h4 class="name" style="color:#7D1A1A"><b>$mallCashier<br><br></b></h4>
                 <div class="logo"><img src="src/img/logo.png" width="120"></div>
                 <form action="" method="post">
                     <div class="input">
