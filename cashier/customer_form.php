@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/update.css">
     <title>FormInsertCustomer</title>
 </head>
+
 <body>
-    <h2>Customer</h2>
+    <h2>Add Customer</h2>
+    <div class="center">
             <table>
                     <form action = "customer.php" method = "POST">
                         <tr>
@@ -40,14 +43,18 @@
                                 <input type = "text" name = "address_customer"/>
                             </td>
                         </tr>
-            </table>
-                    <p></p>
                         <tr>
                             <td>
-                                <input type="submit" name="submit" value="Submit">   
-                                <input type = "reset" value = "Reset"/>
+                                <input type="submit" name="submit" value="Submit">  
                             </td>
+                            <td>
+                                <input type = "reset" value = "Reset" />
+                            </td>
+
                         </tr>
+
+            </table>
+</div>
                     </form>
 </body>
 </html>
