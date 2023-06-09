@@ -24,11 +24,13 @@
               
 ?>
 
-<div class="contents">
-    <div class="content-tittle">CUSTOMER</div>
-    <div class="content-dashboard">
-    <table class="table">
-            <thead>
+<?php include 'header.php' ?>
+
+<div class="container">
+    <div class="content-list">
+        <div class="content1">
+        <table>
+        <thead>
                 <tr>
                     <th>Id Customer</th>
                     <th>Name Customer</th>
@@ -64,6 +66,6 @@
                 <?php endwhile ?>
                 </tbody>
         </table>
-        <a href="customer_form.php" class="btn btn-danger">Add Customer</a>
-    </div>
+        </div>
 </div>
+<a href="customer_form.php" class="btn btn-danger">Add Customer</a>

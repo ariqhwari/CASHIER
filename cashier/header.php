@@ -30,7 +30,7 @@ if (!isset($_SESSION['user'])) {
             <button class="nav-home" onclick="location.href='index.php'">
                 <p>Home</p>
             </button>
-            <button class="nav-customer" onclick="location.href='index.php?page=customer'">
+            <button class="nav-customer" onclick="location.href='customer.php'">
                 <p>Customer</p>
             </button>
             <button class="nav-orders" onclick="location.href='index.php?page=orders'">
