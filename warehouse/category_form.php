@@ -7,6 +7,7 @@
     <title>FormInsertCategory</title>
     <link rel="stylesheet" href="../src/css/form.css"/>
 </head>
+
 <body>
     <div class="kotak_login">
         <p class="tulisan_login" style="color:#7D1A1A"><b>Category</b></p>
@@ -18,8 +19,8 @@
             <input type="submit" name="submit" value="Submit" class="tombol_login">   
             <input type = "reset" value = "Reset" class="tombol_login"/>
         </form>
+        
         <center><?php echo "<a href='index.php?page=category'>Lihat Data</a>";?></center>
     </div>
-
 </body>
 </html>

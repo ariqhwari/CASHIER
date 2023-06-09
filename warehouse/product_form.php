@@ -26,6 +26,7 @@ include '../conn.php';
 
             <input type="submit" name="submit" value="Add" class="tombol_login">
         </form>
+        
         <center><?php echo "<a href='index.php?page=product'>Lihat Data</a>";?></center>
     </div>
     
