@@ -11,12 +11,12 @@ include '../conn.php';
 
 <body >
     <div class="kotak_login">
-        <p class="tulisan_login" style="color:#7D1A1A"><b>Tambah Product</b></p>
+        <p class="tulisan_login" style="color:#7D1A1A"><b>Product</b></p>
 
         <form method="POST" action="product.php">
             
             <label for="product">Product </label>
-            <input type="text" name="name_product" class="form_login" placeholder="Product name">
+            <input type="text" name="name_product" class="form_login" placeholder="Product Name">
 
             <label for="price">Price </label>
             <input type="text" name="price_product" class="form_login" placeholder="Price Product">
