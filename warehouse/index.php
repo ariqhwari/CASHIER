@@ -87,7 +87,7 @@ if (!isset($_SESSION['user'])) {
                     <ul class="list-menu">
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?page=user">
-                                Edit Profile
+                                My Profile
                             </a>
                         </li>
                     </ul>
@@ -110,6 +110,8 @@ if (!isset($_SESSION['user'])) {
                         include 'orders.php';
                     } elseif ($_GET['page'] == 'detail_sales') {
                         include 'detail_sales.php';
+                    } elseif ($_GET['page'] == 'user') {
+                        include 'user.php';
                     } elseif ($_GET['page'] == 'logout') {
                         include 'logout.php';
                     }

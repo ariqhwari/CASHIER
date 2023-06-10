@@ -1,4 +1,4 @@
-<?php include 'conn.php'; ?>
+<?php include '../conn.php'; ?>
 
 <?php
 
@@ -20,9 +20,9 @@ if (isset($_POST['submit'])) {
 // $conn->close();
 ?>
 
-<div class="my-3 card border-0 shadow">
-    <div class="card-header bg-danger text-white">USER</div>
-    <div class="card-body">
+<div class="contents">
+    <div class="content-tittle">My Profile</div>
+    <div class="content-dashboard">
         <table class="table">
             <thead>
                 <tr>
@@ -34,7 +34,8 @@ if (isset($_POST['submit'])) {
                 </tr>
             </thead>
             <?php
-            $query = "SELECT * FROM user";
+            $detail = $_SESSION['user']['name_user']; 
+            $query = "SELECT * FROM user WHERE name_user = '$detail' ";
             $result = mysqli_query($conn, $query);
             ?>
             <?php while ($data = mysqli_fetch_array($result)) : ?>
