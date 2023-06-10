@@ -1,5 +1,5 @@
 <?php
-include 'conn.php';
+include '../conn.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
 
     if ($conn->query($query) === TRUE) {
         echo "Data berhasil diupdate.";
-        echo '<br><br><a href="category.php">Lihat Data</a>';
+        echo '<br><br><a href="user.php">Lihat Data</a>';
     } else {
         echo "Error: " . $query . "<br>" . $conn->error;
     }
@@ -52,7 +52,7 @@ $conn->close();
             <span>Id User</span>
         </label>
         <label for="name">
-            <input type="text" name="name_category" class="input" value="<?php echo $data['name_user']; ?>">
+            <input type="text" name="name_user" class="input" value="<?php echo $data['name_user']; ?>">
             <span>Name</span>
         </label>
         <label for="name">

@@ -1,27 +1,22 @@
+<?php include '../conn.php'; ?>
+
 <?php
-    include '../conn.php';
-            if($_POST["submit"]=="Submit"){
-                // $link = 
-                $name_customer = $_POST["name_customer"];
-                $email_customer = $_POST["email_customer"];
-                $address_customer = $_POST["address_customer"];
-                
-                $insert = "INSERT INTO customer (name_customer,email_customer,address_customer) VALUES ('$name_customer','$email_customer',' $address_customer')";
-                $result = $conn->query($insert);
 
-                if ($result === TRUE) {
-                    echo "New record created successfully";
-                  } else {
-                    echo "Error: " . $insert . "<br>" . $conn->error;
-                  }
-                  
-            }
-            // if($result == TRUE){
-            //     echo "<h2>insert data SUCCESS</h2>";
-            //     // echo "<a href = \"$link\">show data</a>";
-            // }
+if (isset($_POST['submit'])) {
+    $name_customer = $_POST["name_customer"];
+    $email_customer = $_POST["email_customer"];
+    $address_customer = $_POST["address_customer"];
 
-              
+    $query = "INSERT INTO customer (name_customer, email_customer,address_customer) VALUES ('$name_customer', '$email_customer', '$address_customer')";
+
+    if ($conn->query($query) === TRUE) {
+        echo "Data berhasil ditambahkan.";
+    } else {
+        echo "Error: " . $query . "<br>" . $conn->error;
+    }
+}
+
+// $conn->close();
 ?>
 
 <?php include 'header.php' ?>
@@ -59,7 +54,8 @@
                             <?php echo $data['address_customer']; ?>
                         </td>
                         <td>
-                            <a href="customer_update.php" class="btn btn-danger">Update</a>
+                            <!-- <a href="customer_update.php" class="btn btn-danger">Update</a> -->
+                            <?php echo "<a  href='customer_update.php?id=".$data['id_customer']."' class='btn btn-danger'>Update</a>"; ?>
                             <a href="customer_delete.php" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
