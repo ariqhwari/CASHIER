@@ -36,13 +36,26 @@ $conn->close();
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Update Category</title>
+    <link rel="stylesheet" href="../src/css/editproduct.css">
 </head>
+
 <body>
-    <h1>Update Category</h1>
-    <form method="POST" action="">
-        <table>
+    <h1 class="title">Update Category</h1>
+    <form class="form" method="POST" action="">
+        <label>
+            <input type="hidden" name="id" class="input" value="<?php echo $data['id_category']; ?>">
+            <span>Id Category</span>
+        </label>
+        <label for="name">
+            <input type="text" name="name_category" class="input" value="<?php echo $data['name_category']; ?>">
+            <span>Name Category</span>
+        </label>
+        <button class="submit" type="submit" name="submit">Submit</button>
+
+        <!-- <table>
             <input type="hidden" name="id" value="<?php echo $data['id_category']; ?>">
             <tr>
                 <td><label for="name_category">Category Name </label></td>
@@ -52,7 +65,7 @@ $conn->close();
                 <td></td>
                 <td><input type="submit" name="submit" value="Update"></td>
             </tr>
-        </table>
+        </table> -->
     </form>
 </body>
 </html>

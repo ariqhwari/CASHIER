@@ -1,6 +1,6 @@
 <?php
     include '../conn.php';
-            if($_POST["submit"]=="Submit"){
+            if(isset($_POST['submit'])){
                 // $link = 
                 $name_category = $_POST["name_category"];
                 
@@ -43,13 +43,13 @@
                         <?php echo $data['name_category']; ?>
                     </td>
                     <td>
-                        <a href="category_update.php" class="btn btn-danger">Update</a>
+                        <?php echo "<a href='category_update.php?id=" . $data['id_category'] . "' class='btn btn-danger'>Update</a>"; ?>
                         <a href="category_delete.php" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <?php endwhile ?>
             </tbody>
         </table>
-        <a href="category_form.php" class="btn btn-danger">Add Category</a>
+        <br><br><?php echo "<a href='category_form.php'>Add Category</a>"; ?>
     </div>
 </div>
