@@ -81,6 +81,16 @@ if (!isset($_SESSION['user'])) {
                             </a>
                         </li>
                     </ul>
+                    <h6 class="report">
+                        <span>Account</span>
+                    </h6>
+                    <ul class="list-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?page=user">
+                                Edit Profile
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
 
