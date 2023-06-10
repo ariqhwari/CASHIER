@@ -1,3 +1,11 @@
+.kotak_login{
+    width: 350px;
+    background: white;
+    /*meletakkan form ke tengah*/
+    margin: 80px auto;
+    padding: 30px 20px;
+    box-shadow: 0 10px 100px rgb(185, 178, 178);
+}
 .form {
     display: flex;
     flex-direction: column;

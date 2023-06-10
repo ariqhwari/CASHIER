@@ -45,6 +45,7 @@ $conn->close();
 </head>
 
 <body>
+    <div class="kotak_login">
     <form class="form" method="POST" action="">
         <p class="title">Edit Product </p>
         <label>
@@ -66,6 +67,7 @@ $conn->close();
         </label>
         <button class="submit" type="submit" name="submit">Submit</button>
     </form>
+    </div>
 </body>
 
 </html>

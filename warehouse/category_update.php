@@ -43,6 +43,7 @@ $conn->close();
 </head>
 
 <body>
+    <div class="kotak_login">
     <h1 class="title">Update Category</h1>
     <form class="form" method="POST" action="">
         <label>
@@ -55,17 +56,7 @@ $conn->close();
         </label>
         <button class="submit" type="submit" name="submit">Submit</button>
 
-        <!-- <table>
-            <input type="hidden" name="id" value="<?php echo $data['id_category']; ?>">
-            <tr>
-                <td><label for="name_category">Category Name </label></td>
-                <td><input type="text" name="name_category" value="<?php echo $data['name_category']; ?>"><br></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" name="submit" value="Update"></td>
-            </tr>
-        </table> -->
     </form>
+    </div>
 </body>
 </html>
