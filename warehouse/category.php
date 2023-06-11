@@ -44,7 +44,7 @@
                     </td>
                     <td>
                         <?php echo "<a href='category_update.php?id=" . $data['id_category'] . "' class='btn btn-danger'>Update</a>"; ?>
-                        <a href="category_delete.php" class="btn btn-danger">Delete</a>
+                        <?php echo "<a href='category_delete.php?id_category=" .$data['id_category']. "' class='btn btn-danger'>Delete</a>";?>
                     </td>
                 </tr>
                 <?php endwhile ?>
