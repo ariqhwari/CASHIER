@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
                         <td>
                             <!-- <a href="customer_update.php" class="btn btn-danger">Update</a> -->
                             <?php echo "<a  href='customer_update.php?id=".$data['id_customer']."' class='btn btn-danger'>Update</a>"; ?>
-                            <a href="customer_delete.php" class="btn btn-danger">Delete</a>
+                            <?php echo "<a href='customer_delete.php?id_customer=" .$data['id_customer']. "' class='btn btn-danger'>Delete</a>";?>
                         </td>
                     </tr>
                 <?php endwhile ?>
