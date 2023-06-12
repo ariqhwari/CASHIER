@@ -11,7 +11,7 @@
 <body>
     <div class="kotak_login">
         <p class="tulisan_login" style="color:#7D1A1A"><b>Category</b></p>
-        <form action = "category.php" method = "POST">
+        <form action = "index.php?page=category" method = "POST">
 
             <label for="name_category">Category Name </label>
             <input type="text" name="name_category" class="form_login" placeholder="Category Name">

@@ -13,7 +13,7 @@ include '../conn.php';
     <div class="kotak_login">
         <p class="tulisan_login" style="color:#7D1A1A"><b>Product</b></p>
 
-        <form method="POST" action="product.php">
+        <form method="POST" action="index.php?page=product">
             
             <label for="product">Product </label>
             <input type="text" name="name_product" class="form_login" placeholder="Product Name">
