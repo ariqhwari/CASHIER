@@ -16,8 +16,12 @@ if (isset($_POST['submit'])) {
     $query = "UPDATE product SET name_product='$product', price_product='$price', quantity_product='$quantity' WHERE id_product=$id";
 
     if ($conn->query($query) === TRUE) {
-        echo "Data berhasil diupdate.";
-        echo '<br><br><a href="product.php">Lihat Data</a>';
+        echo "
+        <script>
+            alert('Update berhasil');
+            document.location.href = 'index.php?page=product';
+        </script> 
+";
     } else {
         echo "Error: " . $query . "<br>" . $conn->error;
     }

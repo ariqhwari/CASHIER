@@ -1,5 +1,4 @@
 <?php
-    include '../conn.php';
             if(isset($_POST['submit'])){
                 // $link = 
                 $name_category = $_POST["name_category"];
@@ -50,6 +49,6 @@
                 <?php endwhile ?>
             </tbody>
         </table>
-        <br><br><?php echo "<a href='category_form.php'>Add Category</a>"; ?>
+        <br><br><?php echo "<a href='category_form.php' >Add Category</a>"; ?>
     </div>
 </div>

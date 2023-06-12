@@ -52,7 +52,6 @@ if (isset($_POST['submit'])) {
                     </td>
                     <td>
                         <?php echo "<a href='product_edit.php?id=" . $data['id_product'] . "' class='btn btn-danger'>Update</a>"; ?>
-                        <!-- <a href="#" class="btn btn-danger">Delete</a> -->
                         <?php echo "<a href='product_delete.php?id_product=" .$data['id_product']. "' class='btn btn-danger'>Delete</a>";?>
                     </td>
                     </td>

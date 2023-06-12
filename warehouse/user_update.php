@@ -15,8 +15,12 @@ if (isset($_POST['submit'])) {
     $query = "UPDATE user SET name_user='$name',email_user='$email' WHERE id_user=$id";
 
     if ($conn->query($query) === TRUE) {
-        echo "Data berhasil diupdate.";
-        echo '<br><br><a href="user.php">Lihat Data</a>';
+        echo "
+        <script>
+            alert('Update berhasil');
+            document.location.href = 'index.php?page=user';
+        </script> 
+    ";
     } else {
         echo "Error: " . $query . "<br>" . $conn->error;
     }

@@ -20,7 +20,7 @@
             <input type = "reset" value = "Reset" class="tombol_login"/>
         </form>
         
-        <center><?php echo "<a href='index.php?page=category'>Lihat Data</a>";?></center>
+        <center><?php echo "<a href='index.php?page=category'>Show Data</a>";?></center>
     </div>
 </body>
 </html>

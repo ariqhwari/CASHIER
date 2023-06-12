@@ -19,6 +19,34 @@ if (isset($_POST['submit'])) {
 // $conn->close();
 ?>
 
+<style>
+    a.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  
+a.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+
+a.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+  }
+</style>
+
 <?php include 'header.php' ?>
 
 <div class="container">
@@ -54,7 +82,6 @@ if (isset($_POST['submit'])) {
                             <?php echo $data['address_customer']; ?>
                         </td>
                         <td>
-                            <!-- <a href="customer_update.php" class="btn btn-danger">Update</a> -->
                             <?php echo "<a  href='customer_update.php?id=".$data['id_customer']."' class='btn btn-danger'>Update</a>"; ?>
                             <?php echo "<a href='customer_delete.php?id_customer=" .$data['id_customer']. "' class='btn btn-danger'>Delete</a>";?>
                         </td>
@@ -63,5 +90,6 @@ if (isset($_POST['submit'])) {
                 </tbody>
         </table>
         </div>
+    </div>
 </div>
 <a href="customer_form.php" class="btn btn-danger">Add Customer</a>

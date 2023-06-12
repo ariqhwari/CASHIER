@@ -17,6 +17,7 @@ if (!isset($_SESSION['user'])) {
     <link
         href="https://fonts.googleapis.com/css2?family=Geologica&family=Lora:ital,wght@0,500;1,400&family=Poppins:wght@300;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- CSS -->
     <link rel="stylesheet" href="../src/css/index-cashier.css">
     <link rel="icon" href="../src/img/logo.png">

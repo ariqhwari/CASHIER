@@ -18,72 +18,28 @@
         <?php endwhile; ?>
     </div>
     <div class="content2">
-        <?php
-        echo "<pre>";
-        print_r($_SESSION['keranjang']);
-        echo "</pre>"; ?>
     </div>
 </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-9">
-            <div class="card border-0 shadow">
-                <div class="card-body">
-                    <form method="post" class="mb-3">
-                        <div class="input-group">
-                            <input type="text" name="cari" class="form-control input-cari">
-                            <button class="btn btn-primary btn-cari">Cari</button>
-                        </div>
-                    </form>
-                    <div class="letak-produk">   
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow">
-                    <div class="card-body keranjang"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <script>
-$(document).ready(function() {
-    $.ajax({
-        url: 'tampilproduk.php',
-        success: function(hasil) {
-            $(".letak-produk").html(hasil);
-        }
+    $(document).ready(function(){
+        $(document).on("click", ".tambahi", function(){
+            var id_product = $(this).attr("idnya");
+            alert(id_product);
+        })
     })
-})
 </script>
+
 <script>
 $(document).ready(function() {
     $.ajax({
         url: 'tampilkeranjang.php',
         success: function(hasil) {
-            $("keranjang").html(hasil);
+            $(".content2").html(hasil);
         }
     })
 })
-</script>
-<script>
-    $(document).ready(function(){
-        $(document).on("click", ".btn-cari", function(){
-            e.preventDefault();
-            var cari = $(".input-cari").val();
-            $.ajax({
-                type: 'post',
-                url: 'cariproduk.php',
-                data: 'cari='+cari,
-                success:function(hasil){
-                    $(".letak-produk").html(hasil);
-                }
-            })
-        })
-    })
 </script>
 
 <script>
@@ -98,7 +54,7 @@ $(document).ready(function() {
                 $.ajax({
                     url: 'tampilkeranjang.php',
                     success: function(hasil) {
-                        $(".keranjang").html(hasil);
+                        $(".content2").html(hasil);
                     }
                 })
             }

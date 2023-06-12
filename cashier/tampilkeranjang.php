@@ -14,35 +14,28 @@ if (isset($_SESSION['keranjang'])) {
 }
 ?>
 
+
+
 <?php foreach ($keranjang as $key => $data) : ?>
     <div class="row">
-        <div class="col-md-9">
-        <h6><?php echo $data['name_product']; ?></h6>
-        <span class="small text-muted"><?php echo number_format($data['price_product'])?></span>
-        <p class="small">X <?php echo $data['jumlah']?></p>
+            <h6><?php echo $data['name_product']; ?></h6>
+            <span><?php echo number_format($data['price_product'])?> x <?php echo $data['jumlah']?><br></span>
+            <div?>
+                <button class="btn-tambah tambahi" idnya="<?php echo $data['id_product']?>">Tambah</button>
+                <button class="btn-kurang kurangi" idnya="<?php echo $data['id_product']?>">Kurang</button>
+            </div>
     </div>
-    <div class="col-md-3">
-        <div>
-            <i class="bi bi-plus tambahi" idnya="<?php echo $data['id_product']?>"></i>
-        </div>  
-        <div>
-          <i class="bi bi-dash kurangi" idnya="<?php echo $data['id_product']?>" ></i>
-        </div>
-    </div>>
-</div>
 
 <?php endforeach ?>
 
 <form method="post">
-    <div class="mb-3">
-        <label>Total</label>
-        <input type="number" name="total" class="input" value="<?php echo $total ?>" readonly>
+    <div class="total">
+    <div class="coolinput">
+            <label for="" class="text">Total</label>
+            <input type="number" name="total" class="input" value="<?php echo $total ?>" readonly>
+        </div>
     </div>
-    <div class="mb-3"></div>
-        <label>Bayar</label>
-        <input type="number" name="total" class="form-control" value="<?php echo $total ?>" readonly >
-    </div>
-      <button class="btn btn-primary btn-sm">Checkout</button>
+      <button class="btn-danger">Checkout</button>
     
 </form>
 
@@ -58,6 +51,7 @@ if (isset($_SESSION['keranjang'])) {
         width: 100%;
         position: static;
         max-width: 345px;
+        margin: 0 0 20px 0;
     }
 
     .coolinput label.text {
@@ -83,4 +77,59 @@ if (isset($_SESSION['keranjang'])) {
     .coolinput input[type=number].input:focus {
         outline: none;
     }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .btn-danger:hover {
+    background-color: #c82333;
+    }
+
+    .btn-danger:focus {
+    outline: none;
+    }
+    .btn-tambah {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+    }
+
+    .btn-tambah:hover {
+    background-color: #c82333;
+    }
+
+    .btn-tambah:focus {
+    outline: none;
+    }
+    .btn-kurang {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+    }
+
+    .btn-kurang:hover {
+    background-color: #c82333;
+    }
+
+    .btn-kurang:focus {
+    outline: none;
+    }
+
+
+    
 </style>

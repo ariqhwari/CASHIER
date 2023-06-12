@@ -3,12 +3,21 @@
 
     $query = "DELETE FROM customer WHERE id_customer = '".$_GET["id_customer"]."'";
     if (mysqli_query($conn,$query)){
-        echo "delete success";
+        echo "
+            <script>
+                alert('Data Berhasil Dihapus');
+                document.location.href = 'customer.php';
+            </script> 
+    ";
     }else {
-        echo "error". mysqli_error($conn);
+        echo "
+            <script>
+                alert('Data Gagal Dihapus');
+                document.location.href = 'customer.php';
+            </script> 
+    ";
 
     }
     mysqli_close($conn);
 ?>
 
-<?php include 'customer.php' ?>

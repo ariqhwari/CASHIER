@@ -34,8 +34,8 @@ if (isset($_POST['submit'])) {
                 </tr>
             </thead>
             <?php
-            $detail = $_SESSION['user']['name_user']; 
-            $query = "SELECT * FROM user WHERE name_user = '$detail' ";
+            $detail = $_SESSION['user']['id_user']; 
+            $query = "SELECT * FROM user WHERE id_user = '$detail' ";
             $result = mysqli_query($conn, $query);
             ?>
             <?php while ($data = mysqli_fetch_array($result)) : ?>
@@ -61,8 +61,5 @@ if (isset($_POST['submit'])) {
                 <?php endwhile ?>
             </tbody>
         </table>
-        <tr>
-            <td><br><br><?php echo "<a href='user_form.php'>Tambahkan Data</a>";?></td>
-        </tr>
     </div>
 </div>

@@ -14,8 +14,12 @@ if (isset($_POST['submit'])) {
     $query = "UPDATE category SET name_category='$name' WHERE id_category=$id";
 
     if ($conn->query($query) === TRUE) {
-        echo "Data berhasil diupdate.";
-        echo '<br><br><a href="category.php">Lihat Data</a>';
+        echo "
+        <script>
+            alert('Update berhasil');
+            document.location.href = 'index.php?page=category';
+        </script> 
+    ";
     } else {
         echo "Error: " . $query . "<br>" . $conn->error;
     }

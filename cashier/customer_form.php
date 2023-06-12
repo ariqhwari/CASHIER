@@ -1,61 +1,34 @@
+<?php
+include '../conn.php';
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/css/update.css">
-    <title>FormInsertCustomer</title>
+    <title>Tambah Product</title>
+    <link rel="stylesheet" href="../src/css/form.css"/>
 </head>
 
-<body>
-    <h2>Add Customer</h2>
-    <div class="center">
-            <table>
-                    <form action = "customer.php" method = "POST">
-                        <tr>
-                            <td>
-                                <label for = "name_customer">
-                                    Name :
-                                </label>
-                            </td>
-                            <td>
-                                <input type = "text" name = "name_customer"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for = "email_customer">
-                                    Email :
-                                </label>
-                            </td>
-                            <td>
-                                <input type = "email" name = "email_customer"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for = "address_customer">
-                                    Address :
-                                </label>
-                            </td>
-                            <td>
-                                <input type = "text" name = "address_customer"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="submit" name="submit" value="Submit">  
-                            </td>
-                            <td>
-                                <input type = "reset" value = "Reset" />
-                            </td>
+<body >
+    <div class="kotak_login">
+        <p class="tulisan_login" style="color:#7D1A1A"><b>Product</b></p>
 
-                        </tr>
+        <form method="POST" action="customer.php">
+            
+            <label for="name_customer">Name </label>
+            <input type="text" name="name_customer" class="form_login" placeholder="Customer Name">
 
-            </table>
-</div>
-                    </form>
+            <label for="email_customer">Email </label>
+            <input type="text" name="email_customer" class="form_login" placeholder="Customer Email">
+
+            <label for="address_customer">Address </label>
+            <input type="text" name="address_customer" class="form_login" placeholder="Customer Address">
+
+            <input type="submit" name="submit" value="Add" class="tombol_login">
+        </form>
+        
+        <center><?php echo "<a href='customer.php'>Lihat Data</a>";?></center>
+    </div>
+    
 </body>
 </html>
-
