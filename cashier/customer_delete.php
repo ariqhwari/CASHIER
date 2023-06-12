@@ -10,3 +10,5 @@
     }
     mysqli_close($conn);
 ?>
+
+<?php include 'customer.php' ?>
