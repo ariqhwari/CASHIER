@@ -13,9 +13,9 @@ if (isset($_SESSION['keranjang'])) {
     }
 }
 
-echo "<pre>";
-print_r($_SESSION['keranjang']);
-echo "</pre>";
+// echo "<pre>";
+// print_r($_SESSION['keranjang']);
+// echo "</pre>";
 ?>
 
 
