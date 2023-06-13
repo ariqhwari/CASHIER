@@ -17,11 +17,14 @@ print_r($customer);
 print_r($id_customer);
 echo "</pre>";
 
+$id_order = '';
+
 // Simpan data Penjualan
 $query = "INSERT INTO sales(id_customer, id_user, order_date, total)
         VALUES ('$id_customer', '$id_user', '$order_date', '$total')";
 if ($conn->query($query) === TRUE) {
     echo "Data berhasil ditambahkan.";
+    $id_order = $conn->insert_id;
 } else {
     echo "Error: " . $query . "<br>" . $conn->error;
 }
@@ -50,3 +53,5 @@ if (isset($_SESSION['keranjang'])) {
         }
     }
 }
+
+header('Location: /pemweb/fp_cashier/cashier/index.php?page=detail_sales&id=' . $id_order);
