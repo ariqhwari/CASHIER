@@ -7,7 +7,12 @@ if (isset($_POST['submit'])) {
     $result = $conn->query($insert);
 
     if ($result === TRUE) {
-        echo "New record created successfully";
+        echo "
+            <script>
+                alert('Data Berhasil Ditambahkan');
+                document.location.href = 'index.php?page=category';
+            </script> 
+    ";
     } else {
         echo "Error: " . $insert . "<br>" . $conn->error;
     }

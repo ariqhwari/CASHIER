@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
         echo "
         <script>
             alert('Update berhasil');
-            document.location.href = 'index.php?page=category';
+            document.location.href = 'index.php?page=customer';
         </script> 
     ";
     } else {

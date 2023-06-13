@@ -12,8 +12,9 @@ if (isset($_POST['submit'])) {
     $product = $_POST['name_product'];
     $price = $_POST['price_product'];
     $quantity = $_POST['quantity_product'];
+    $information = $_POST['information_product'];
 
-    $query = "UPDATE product SET name_product='$product', price_product='$price', quantity_product='$quantity' WHERE id_product=$id";
+    $query = "UPDATE product SET name_product='$product', price_product='$price', quantity_product='$quantity', information_product='$information' WHERE id_product=$id";
 
     if ($conn->query($query) === TRUE) {
         echo "
@@ -68,6 +69,10 @@ $conn->close();
         <label for="quantity">
             <input type="text" name="quantity_product" class="input" value="<?php echo $data['quantity_product']; ?>">
             <span>Quantity</span>
+        </label>
+        <label for="information">
+            <input type="text" name="information_product" class="input" value="<?php echo $data['information_product']; ?>">
+            <span>Information product</span>
         </label>
         <button class="submit" type="submit" name="submit">Submit</button>
     </form>

@@ -10,7 +10,12 @@ if (isset($_POST['submit'])) {
     $query = "INSERT INTO customer (name_customer, email_customer,address_customer) VALUES ('$name_customer', '$email_customer', '$address_customer')";
 
     if ($conn->query($query) === TRUE) {
-        echo "Data berhasil ditambahkan.";
+        echo "
+            <script>
+                alert('Data Berhasil Ditambahkan');
+                document.location.href = 'customer.php';
+            </script> 
+    ";
     } else {
         echo "Error: " . $query . "<br>" . $conn->error;
     }
@@ -92,4 +97,4 @@ a.btn-danger:hover {
         </div>
     </div>
 </div>
-<a href="customer_form.php" class="btn btn-danger">Add Customer</a>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="customer_form.php" class="btn btn-danger">Add Customer</a>

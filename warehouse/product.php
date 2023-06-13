@@ -14,7 +14,12 @@ if (isset($_POST['submit'])) {
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
     if ($conn->query($query) === TRUE) {
-        echo "Data berhasil ditambahkan.";
+        echo "
+        <script>
+            alert('Data Berhasil Ditambahkan');
+            document.location.href = 'index.php?page=product';
+        </script> 
+";
     } else {
         echo "Error: " . $query . "<br>" . $conn->error;
     }
@@ -30,9 +35,11 @@ if (isset($_POST['submit'])) {
             <thead>
                 <tr>
                     <th>Id product</th>
+                    <th>Id category</th>
                     <th>Product</th>
                     <th>Price</th>
                     <th>Quantity</th>
+                    <th>Information</th>
                     <th>Edit</th>
                 </tr>
             </thead>
@@ -47,6 +54,9 @@ if (isset($_POST['submit'])) {
                             <?php echo $data['id_product']; ?>
                         </td>
                         <td>
+                            <?php echo $data['id_category']; ?>
+                        </td>
+                        <td>
                             <?php echo $data['name_product']; ?>
                         </td>
                         <td>
@@ -54,6 +64,9 @@ if (isset($_POST['submit'])) {
                         </td>
                         <td>
                             <?php echo $data['quantity_product']; ?>
+                        </td>
+                        <td>
+                            <?php echo $data['information_product']; ?>
                         </td>
                         <td>
                             <?php echo "<a href='product_edit.php?id=" . $data['id_product'] . "' class='btn btn-danger'>Update</a>"; ?>
