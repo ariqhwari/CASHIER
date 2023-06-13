@@ -1,5 +1,5 @@
 <div class="contents">
-    <div class="content-tittle">Customers</div>
+    <div class="content-tittle">Customer</div>
     <div class="content-dashboard">
         <table class="table">
             <thead>
@@ -30,10 +30,11 @@
                         <td>
                             <?php echo $data['address_customer']; ?>
                         </td>
-                        <!-- <td>
-                            <a href="#" class="btn btn-danger">Update</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </td> -->
+                        <td>
+                            <!-- "<a href='customer_update.php?id=" . $data['id_customer'] . "' class='btn btn-danger'>Update</a>"; -->
+                            <!-- <a href="#" class="btn btn-danger">Update</a> -->
+                            <!-- <a href="#" class="btn btn-danger">Delete</a> -->
+                        </td>
                     </tr>
                 <?php endwhile ?>
                 </tbody>

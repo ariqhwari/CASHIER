@@ -37,8 +37,9 @@
                             <?php echo number_format($data['total']) ?>
                         </td>
                         <td>
-                            <a href="#" class="btn btn-danger">Detail</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
+                            <a href="index.php?page=detail_sales&id=<?php echo $data['id_sales'] ?>" class="btn btn-danger">Detail</a>
+                            <?php echo "<a href='detail_sales_delete.php?id_sales=" .$data['id_sales']. "' class='btn btn-danger'>Delete</a>";?>
+                            <!-- <a href="#" class="btn btn-danger">Delete</a> -->
                         </td>
                     </tr>
                     <?php $key++; ?>

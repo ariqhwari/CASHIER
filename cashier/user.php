@@ -1,3 +1,5 @@
+<?php include '../conn.php'; ?>
+
 <?php
 
 if (isset($_POST['submit'])) {
@@ -18,10 +20,13 @@ if (isset($_POST['submit'])) {
 // $conn->close();
 ?>
 
-<div class="contents">
-    <div class="content-tittle">My Profile</div>
-    <div class="content-dashboard">
-        <table class="table">
+
+<?php include 'header.php' ?>
+
+<div class="container">
+    <div class="content-list">
+        <div class="content1">
+        <table>
             <thead>
                 <tr>
                     <th>Id User</th>
@@ -59,5 +64,6 @@ if (isset($_POST['submit'])) {
                 <?php endwhile ?>
             </tbody>
         </table>
+        </div>
     </div>
 </div>

@@ -48,7 +48,8 @@
                 </tr>
                 <?php endwhile ?>
             </tbody>
+            <td style="border: none;"><a href='category_form.php' class="btn btn-danger">Add Category</a></td>
         </table>
-        <br><br><?php echo "<a href='category_form.php' >Add Category</a>"; ?>
+
     </div>
 </div>

@@ -1,5 +1,4 @@
 <?php
-include '../conn.php';
 
 if (isset($_POST['submit'])) {
     $product = $_POST['name_product'];
@@ -36,32 +35,28 @@ if (isset($_POST['submit'])) {
             $result = mysqli_query($conn, $query);
             ?>
             <?php while ($data = mysqli_fetch_array($result)) : ?>
-            <tbody>
-                <tr>
-                    <td>
-                        <?php echo $data['id_product']; ?>
-                    </td>
-                    <td>
-                        <?php echo $data['name_product']; ?>
-                    </td>
-                    <td>
-                        <?php echo number_format($data['price_product']); ?>
-                    </td>
-                    <td>
-                        <?php echo $data['quantity_product']; ?>
-                    </td>
-                    <td>
-                        <?php echo "<a href='product_edit.php?id=" . $data['id_product'] . "' class='btn btn-danger'>Update</a>"; ?>
-                        <?php echo "<a href='product_delete.php?id_product=" .$data['id_product']. "' class='btn btn-danger'>Delete</a>";?>
-                    </td>
-                    </td>
-
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>
+                            <?php echo $data['id_product']; ?>
+                        </td>
+                        <td>
+                            <?php echo $data['name_product']; ?>
+                        </td>
+                        <td>
+                            <?php echo number_format($data['price_product']); ?>
+                        </td>
+                        <td>
+                            <?php echo $data['quantity_product']; ?>
+                        </td>
+                        <td>
+                            <?php echo "<a href='product_edit.php?id=" . $data['id_product'] . "' class='btn btn-danger'>Update</a>"; ?>
+                            <?php echo "<a href='product_delete.php?id_product=" . $data['id_product'] . "' class='btn btn-danger'>Delete</a>"; ?>
+                        </td>
+                    </tr>
                 <?php endwhile ?>
-            </tbody>
+                </tbody>
+                <td style="border: none;"><a href='product_form.php' class="btn btn-danger">Add Product</a></td>
         </table>
-        <tr>
-            <td><br><br><?php echo "<a href='product_form.php'>Add Product</a>"; ?></td>
-        </tr>
     </div>
 </div>

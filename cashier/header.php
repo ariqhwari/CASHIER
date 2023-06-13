@@ -37,8 +37,8 @@ if (!isset($_SESSION['user'])) {
             <button class="nav-orders" onclick="location.href='index.php?page=orders'">
                 <p>Orders</p>
             </button>
-            <button class="nav-report" onclick="location.href='index.php?page=detail_sales'">
-                <p>Report</p>
+            <button class="nav-report" onclick="location.href='user.php'">
+                <p>MyProfile</p>
             </button>
             <button class="nav-logout" onclick="location.href='logout.php'">
                 <p>Logout</p>
