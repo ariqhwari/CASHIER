@@ -1,5 +1,3 @@
-<?php include '../conn.php'; ?>
-
 <?php
 
 if (isset($_POST['submit'])) {
@@ -34,32 +32,32 @@ if (isset($_POST['submit'])) {
                 </tr>
             </thead>
             <?php
-            $detail = $_SESSION['user']['id_user']; 
+            $detail = $_SESSION['user']['id_user'];
             $query = "SELECT * FROM user WHERE id_user = '$detail' ";
             $result = mysqli_query($conn, $query);
             ?>
             <?php while ($data = mysqli_fetch_array($result)) : ?>
-            <tbody>
-                <tr>
-                    <td>
-                        <?php echo $data['id_user']; ?>
-                    </td>
-                    <td>
-                        <?php echo $data['name_user']; ?>
-                    </td>
-                    <td>
-                        <?php echo $data['email_user']; ?>
-                    </td>
-                    <td>
-                        <?php echo $data['type_user']; ?>
-                    </td>
-                    <td>
-                        <?php echo "<a  href='user_update.php?id=".$data['id_user']."' class='btn btn-danger'>Update</a>"; ?>
-                         <!-- "<a href='user_delete.php?id_user=" .$data['id_user']. "' class='btn btn-danger'>Delete</a>"; -->
-                    </td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>
+                            <?php echo $data['id_user']; ?>
+                        </td>
+                        <td>
+                            <?php echo $data['name_user']; ?>
+                        </td>
+                        <td>
+                            <?php echo $data['email_user']; ?>
+                        </td>
+                        <td>
+                            <?php echo $data['type_user']; ?>
+                        </td>
+                        <td>
+                            <?php echo "<a  href='user_update.php?id=" . $data['id_user'] . "' class='btn btn-danger'>Update</a>"; ?>
+                            <!-- "<a href='user_delete.php?id_user=" .$data['id_user']. "' class='btn btn-danger'>Delete</a>"; -->
+                        </td>
+                    </tr>
                 <?php endwhile ?>
-            </tbody>
+                </tbody>
         </table>
     </div>
 </div>

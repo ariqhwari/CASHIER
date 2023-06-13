@@ -14,9 +14,7 @@ if (!isset($_SESSION['user'])) {
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Geologica&family=Lora:ital,wght@0,500;1,400&family=Poppins:wght@300;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica&family=Lora:ital,wght@0,500;1,400&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <link rel="icon" href="../src/img/logo.png" type="image">
     <!-- CSS -->
     <link href="../src/css/index-warehouse.css" rel="stylesheet">
@@ -29,8 +27,7 @@ if (!isset($_SESSION['user'])) {
         <input class="navbar-search" type="text" placeholder="Search" aria-label="Search">
         <button class="signouts" onclick="location.href='index.php?page=logout'">
             <p>Logout</p>
-            <svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg">
+            <svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
             </svg>
         </button>
@@ -67,17 +64,6 @@ if (!isset($_SESSION['user'])) {
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?page=orders">
                                 Orders
-                            </a>
-                        </li>
-                    </ul>
-
-                    <h6 class="report">
-                        <span>Reports</span>
-                    </h6>
-                    <ul class="list-menu">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php?page=detail_sales">
-                                Sales Report
                             </a>
                         </li>
                     </ul>
