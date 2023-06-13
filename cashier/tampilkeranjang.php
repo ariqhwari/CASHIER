@@ -12,6 +12,10 @@ if (isset($_SESSION['keranjang'])) {
         $total += $product['price_product'] * $jumlah;
     }
 }
+
+// echo "<pre>";
+// print_r($_SESSION['keranjang']);
+// echo "</pre>";
 ?>
 
 
@@ -32,14 +36,24 @@ if (isset($_SESSION['keranjang'])) {
     <div class="total">
         <div class="coolinput">
             <label for="" class="text">Name</label>
-            <input type="text" name="email" class="input">
-            <label for="" class="text">E-mail</label>
-            <input type="text" name="email" class="input">
+            <select name="id_customer">
+                <option value=>Choose one</option>
+                <?php
+                $query = "SELECT id_customer, name_customer FROM customer";
+                $result = $conn->query($query);
+                while ($obj = $result->fetch_object()) {
+                    echo "<option value= $obj->id_customer>$obj->id_customer - $obj->name_customer</option>";
+                }
+                ?>
+            </select>
+            <!-- <input type="text" name="email" class="input"> -->
+            <!-- <label for="" class="text">E-mail</label>
+            <input type="text" name="email" class="input"> -->
             <label for="" class="text">Total</label>
             <input type="number" name="total" class="input" value="<?php echo $total ?>" readonly>
         </div>
     </div>
-    <button class="btn-danger">Checkout</button>
+    <button class="btn-danger" name="submit">Checkout</button>
 
 </form>
 

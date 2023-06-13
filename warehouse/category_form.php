@@ -18,7 +18,7 @@
             <label for="name_category">Category Name </label>
             <input type="text" name="name_category" class="form_login" placeholder="Category Name">
 
-            <input type="submit" name="submit" value="Submit" class="tombol_login">
+            <input type="submit" name="submit" value="Add" class="tombol_login">
             <input type="reset" value="Reset" class="tombol_login" />
         </form>
 

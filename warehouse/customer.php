@@ -1,5 +1,5 @@
 <div class="contents">
-    <div class="content-tittle">Customers</div>
+    <div class="content-tittle">Customer</div>
     <div class="content-dashboard">
         <table class="table">
             <thead>

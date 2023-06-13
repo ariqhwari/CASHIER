@@ -17,10 +17,10 @@ while ($tiap = $ambil->fetch_assoc()) {
     $product[] = $tiap;
 }
 
-echo "<pre>";
-print_r($sales);
-print_r($product);
-echo "</pre>";
+// echo "<pre>";
+// print_r($sales);
+// print_r($product);
+// echo "</pre>";
 ?>
 <div class="contents">
     <div class="content-tittle">Customers</div>
@@ -60,13 +60,21 @@ echo "</pre>";
         </thead>
         <tbody>
             <?php foreach ($product as $key => $value) : ?>
-            <tr>
-                <td><?php echo $key + 1 ?></td>
-                <td><?php echo $value['name_product'] ?></td>
-                <td><?php echo $value['quantity'] ?></td>
-                <td><?php echo number_format($value["price_product"]) ?></td>
-            </tr>
-            <?php endforeach ?>
+                <<<<<<< HEAD <tr>
+                    <td><?php echo $key + 1 ?></td>
+                    <td><?php echo $value['name_product'] ?></td>
+                    <td><?php echo $value['quantity'] ?></td>
+                    <td><?php echo number_format($value["price_product"]) ?></td>
+                    </tr>
+                    =======
+                    <tr>
+                        <td><?php echo $key + 1 ?></td>
+                        <td><?php echo $value['name_product'] ?></td>
+                        <td><?php echo $value['quantity'] ?></td>
+                        <td><?php echo number_format($value["price_product"]) ?></td>
+                    </tr>
+                    >>>>>>> b07e7e9e37141f303ee03b4a7c316644dff7d7ce
+                <?php endforeach ?>
         </tbody>
     </table>
 

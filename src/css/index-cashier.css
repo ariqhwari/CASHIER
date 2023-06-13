@@ -164,7 +164,7 @@ nav {
 
 .nav-report p::before {
     position: absolute;
-    content: "Report";
+    content: "MyProfile";
     width: 0%;
     inset: 0;
     color: var(--hovered-color);

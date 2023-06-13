@@ -48,7 +48,8 @@ if (isset($_POST['submit'])) {
                     </tr>
                 <?php endwhile ?>
                 </tbody>
-                <td style="border: none;"><?php echo "<a href='category_form.php' class='btn btn-danger'>Add Category</a>"; ?></td>
+                <td style="border: none;"><a href='category_form.php' class="btn btn-danger">Add Category</a></td>
         </table>
+
     </div>
 </div>
