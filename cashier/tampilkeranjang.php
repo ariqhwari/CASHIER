@@ -32,12 +32,12 @@ if (isset($_SESSION['keranjang'])) {
 
 <?php endforeach ?>
 
-<form method="POST" action="checkout.php">
+<form id="keranjangForm" method="POST" action="checkout.php">
     <div class="total">
         <div class="coolinput">
             <label for="" class="text">Name</label>
-            <select name="id_customer">
-                <option value=>Choose one</option>
+            <select id="id_customer" name="id_customer">
+                <option value="0">Choose one</option>
                 <?php
                 $query = "SELECT id_customer, name_customer FROM customer";
                 $result = $conn->query($query);
@@ -56,6 +56,24 @@ if (isset($_SESSION['keranjang'])) {
     <button class="btn-danger" name="submit">Checkout</button>
 
 </form>
+
+<script>
+    
+$("#keranjangForm").submit(function(e) {
+    var customerValue = $("#id_customer").val();
+    
+    if (customerValue === "0") {
+        alert("Pilih Customer Terlebih Dahulu");
+        $("#alertBox").html("Pilih customer sebelum checkout");
+        $("#alertBox").removeClass('hide');
+        e.preventDefault();
+        return false;
+    }
+    
+    // alert("Customer telah dipilih");
+    return true;
+});
+</script>
 
 <style>
 .total {
