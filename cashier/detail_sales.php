@@ -40,7 +40,7 @@ while ($tiap = $ambil->fetch_assoc()) {
         </tr>
         <tr>
             <td>Order Date</td>
-            <td><?php echo date("d M Y H:i", strtotime($sales['order_date'])); ?></td>
+            <td><?php echo date("d M Y H:i", strtotime($sales['order_date']) + 5*3600); ?></td>
         </tr>
         <tr>
             <td>Total</td>

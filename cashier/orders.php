@@ -33,7 +33,7 @@ include '../conn.php'
                             <?php echo $data['id_sales']; ?>
                         </td>
                         <td>
-                            <?php echo date("d M Y H:i", strtotime($data['order_date'])); ?>
+                            <?php echo date("d M Y H:i", strtotime($data['order_date']) + 5*3600); ?>
                         </td>
                         <td>
                             <?php echo ($data['name_customer']) ?>

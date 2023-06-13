@@ -4,9 +4,15 @@ if (isset($_POST['submit'])) {
     $product = $_POST['name_product'];
     $price = $_POST['price_product'];
     $quantity = $_POST['quantity_product'];
+    $id_category = $_POST['id_category'];
+    $information_product = $_POST['information_product'];
+    $photo_product = $_FILES['fileToUpload']['name'];
 
-    $query = "INSERT INTO product (name_product, price_product, quantity_product) VALUES ('$product', '$price', '$quantity')";
+    $query = "INSERT INTO product (name_product, price_product, quantity_product, id_category, information_product, photo_product) VALUES ('$product', '$price', '$quantity', '$id_category', '$information_product', '$photo_product')";
 
+    $target_dir = "../src/img/";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
     if ($conn->query($query) === TRUE) {
         echo "Data berhasil ditambahkan.";
     } else {
