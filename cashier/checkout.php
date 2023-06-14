@@ -10,20 +10,20 @@ $order_date = date("Y-m-d H:i");
 $ambil = $conn->query("SELECT * FROM customer WHERE id_customer='$id_customer'");
 $customer = $ambil->fetch_assoc();
 
-echo "<pre>";
-print_r($_SESSION['keranjang']);
-print_r($_POST);
-print_r($customer);
-print_r($id_customer);
-echo "</pre>";
+// echo "<pre>";
+// print_r($_SESSION['keranjang']);
+// print_r($_POST);
+// print_r($customer);
+// print_r($id_customer);
+// echo "</pre>";
+
+$id_order = '';
 
 // Simpan data Penjualan
 $query = "INSERT INTO sales(id_customer, id_user, order_date, total)
         VALUES ('$id_customer', '$id_user', '$order_date', '$total')";
 if ($conn->query($query) === TRUE) {
-    echo "Data berhasil ditambahkan.";
-} else {
-    echo "Error: " . $query . "<br>" . $conn->error;
+    $id_order = $conn->insert_id;
 }
 
 
@@ -43,9 +43,12 @@ if (isset($_SESSION['keranjang'])) {
             $query2 = "INSERT INTO detail_sales(id_sales, id_product, quantity, sub_total)
                     VALUES ('{$data['id_sales']}', '$id_product', '$jumlah', '$sub_total')";
             if ($conn->query($query2) === TRUE) {
-                echo "Data berhasil ditambahkan.";
-            } else {
-                echo "Error: " . $query . "<br>" . $conn->error;
+                echo "
+                <script>
+                    alert('Order Success');
+                    document.location.href = 'index.php?page=detail_sales&id=$id_order';
+                </script> 
+                ";
             }
         }
     }

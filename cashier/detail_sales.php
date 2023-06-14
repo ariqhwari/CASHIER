@@ -40,7 +40,7 @@ while ($tiap = $ambil->fetch_assoc()) {
         </tr>
         <tr>
             <td>Order Date</td>
-            <td><?php echo date("d M Y H:i", strtotime($sales['order_date'])); ?></td>
+            <td><?php echo date("d M Y H:i", strtotime($sales['order_date']) + 5 * 3600); ?></td>
         </tr>
         <tr>
             <td>Total</td>
@@ -61,7 +61,12 @@ while ($tiap = $ambil->fetch_assoc()) {
         </thead>
         <tbody>
             <?php foreach ($product as $key => $value) : ?>
-
+                <tr>
+                    <td><?php echo $key + 1 ?></td>
+                    <td><?php echo $value['name_product'] ?></td>
+                    <td><?php echo $value['quantity'] ?></td>
+                    <td><?php echo number_format($value["price_product"]) ?></td>
+                </tr>
                 <tr>
                     <td><?php echo $key + 1 ?></td>
                     <td><?php echo $value['name_product'] ?></td>

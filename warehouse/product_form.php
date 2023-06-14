@@ -13,7 +13,7 @@ include '../conn.php';
     <div class="kotak_login">
         <p class="tulisan_login" style="color:#7D1A1A"><b>Product</b></p>
 
-        <form method="POST" action="index.php?page=product">
+        <form method="POST" action="index.php?page=product" enctype="multipart/form-data">
             
             <label for="product">Product </label>
             <input type="text" name="name_product" class="form_login" placeholder="Product Name">
@@ -39,6 +39,8 @@ include '../conn.php';
 
             <label for="information_product">Product Information </label>
             <input type="text" name="information_product" class="form_login" placeholder="Information Product">
+
+            <input type="file" name="fileToUpload" id="fileToUpload">
 
             <input type="submit" name="submit" value="Add" class="tombol_login">
             <input type = "reset" value = "Reset" class="tombol_login"/>

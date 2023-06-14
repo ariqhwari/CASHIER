@@ -8,7 +8,6 @@
                     <th>Name Customer</th>
                     <th>E-mail Customer</th>
                     <th>Address Customer</th>
-                    <th>Edit</th>
                 </tr>
             </thead>
             <?php
@@ -29,10 +28,6 @@
                         </td>
                         <td>
                             <?php echo $data['address_customer']; ?>
-                        </td>
-                        <td>
-                            <a href="#" class="btn btn-danger">Update</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 <?php endwhile ?>

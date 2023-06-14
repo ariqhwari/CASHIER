@@ -14,7 +14,9 @@ if (!isset($_SESSION['user'])) {
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geologica&family=Lora:ital,wght@0,500;1,400&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geologica&family=Lora:ital,wght@0,500;1,400&family=Poppins:wght@300;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- CSS -->
     <link rel="stylesheet" href="../src/css/index-cashier.css">
@@ -24,7 +26,7 @@ if (!isset($_SESSION['user'])) {
 
 <body>
     <nav>
-        <a class="tittle" href="#">$MALL CASHIER</a>
+        <a class="tittle" href="index.php">$MALL CASHIER</a>
         <div class="listnav">
             <button class="nav-home" onclick="location.href='index.php'">
                 <p>Home</p>

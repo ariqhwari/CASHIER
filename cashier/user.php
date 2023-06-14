@@ -23,47 +23,24 @@ if (isset($_POST['submit'])) {
 
 <?php include 'header.php' ?>
 
-<div class="container">
-    <div class="content-list">
-        <div class="content1">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Id User</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Type</th>
-                        <th>Edit</th>
-                    </tr>
-                </thead>
-                <?php
-                $detail = $_SESSION['user']['id_user'];
-                $query = "SELECT * FROM user WHERE id_user = '$detail' ";
-                $result = mysqli_query($conn, $query);
-                ?>
-                <?php while ($data = mysqli_fetch_array($result)) : ?>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <?php echo $data['id_user']; ?>
-                            </td>
-                            <td>
-                                <?php echo $data['name_user']; ?>
-                            </td>
-                            <td>
-                                <?php echo $data['email_user']; ?>
-                            </td>
-                            <td>
-                                <?php echo $data['type_user']; ?>
-                            </td>
-                            <td>
-                                <?php echo "<a  href='user_update.php?id=" . $data['id_user'] . "' class='btn btn-danger'>Update</a>"; ?>
-                                <!-- "<a href='user_delete.php?id_user=" .$data['id_user']. "' class='btn btn-danger'>Delete</a>"; -->
-                            </td>
-                        </tr>
-                    <?php endwhile ?>
-                    </tbody>
-            </table>
+
+
+<div class="user">
+    <div class="card">
+        <?php
+        $detail = $_SESSION['user']['id_user'];
+        $query = "SELECT * FROM user WHERE id_user = '$detail' ";
+        $result = mysqli_query($conn, $query);
+        ?>
+        <?php while ($data = mysqli_fetch_array($result)) : ?>
+        <div class="card-photo"></div>
+        <div class="card-title"><?php echo $data['name_user']; ?><br>
+            <span><?php echo $data['email_user']; ?></span>
+            <span><br><?php echo $data['type_user']; ?></span>
+        </div>
+        <div class="card-socials">
+            <?php echo "<a  href='user_update.php?id=" . $data['id_user'] . "' class='btn btn-danger'>Update</a>"; ?>
+            <?php endwhile; ?>
         </div>
     </div>
 </div>
