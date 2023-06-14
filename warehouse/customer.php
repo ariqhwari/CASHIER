@@ -28,7 +28,7 @@
                             <?php echo $data['email_customer']; ?>
                         </td>
                         <td>
-                            <?php echo $data['address_-customer']; ?>
+                            <?php echo $data['address_customer']; ?>
                         </td>
                         <td>
                             <a href="#" class="btn btn-danger">Update</a>

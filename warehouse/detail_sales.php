@@ -60,12 +60,7 @@ while ($tiap = $ambil->fetch_assoc()) {
         </thead>
         <tbody>
             <?php foreach ($product as $key => $value) : ?>
-                <tr>
-                    <td><?php echo $key + 1 ?></td>
-                    <td><?php echo $value['name_product'] ?></td>
-                    <td><?php echo $value['quantity'] ?></td>
-                    <td><?php echo number_format($value["price_product"]) ?></td>
-                </tr>
+
                 <tr>
                     <td><?php echo $key + 1 ?></td>
                     <td><?php echo $value['name_product'] ?></td>
