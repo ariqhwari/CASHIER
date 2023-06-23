@@ -1,9 +1,8 @@
-## Pemrograman Web-kelompok-5
+<div align="center">
 
-## JUDUL
-```
-$MALL CASHIER
-```
+## $MALL CASHIER
+
+</div>
 
 ## ANGGOTA KELOMPOK 5
 ```
@@ -20,9 +19,12 @@ Website : [CLICK HERE](https://cashiersmall.000webhostapp.com/)
 
 ## DESKRIPSI
 
+<div align="justify">
+
 Small Cashier adalah sebuah website kasir yang dirancang untuk membantu pengelolaan transaksi penjualan dengan mudah dan efisien. Website ini menyediakan fitur-fitur yang mempermudah proses checkout dan pengelolaan keranjang belanja menggunakan library jQuery.Pada fitur untuk pengguna, Small Cashier memungkinkan pengguna untuk melakukan proses checkout dengan cepat dan praktis. Pengguna dapat menambahkan produk ke dalam keranjang belanja dengan mengklik tombol tambah atau kurang menggunakan fungsi yang disediakan oleh jQuery. Hal ini memudahkan pengguna dalam mengatur jumlah produk yang ingin dibeli sebelum melakukan proses checkout.<br><br>
 Sementara itu, pada fitur untuk admin, Small Cashier menyediakan fungsi CRUD (Create, Read, Update, Delete) yang memungkinkan admin untuk mengelola produk dengan mudah. Admin dapat menambahkan produk baru ke dalam database, melihat daftar produk yang tersedia, mengubah informasi produk, dan menghapus produk yang tidak diperlukan lagi. Dengan fitur ini, admin dapat melakukan pengelolaan inventaris secara efektif dan efisien. Small Cashier menjadi solusi yang tepat bagi perusahaan atau usaha kecil yang membutuhkan sistem kasir yang handal dan dapat disesuaikan dengan kebutuhan mereka.
 
+</div>
 
 #### ACCOUNT CASHIER/USER
 E-mail : ```faris@gmail.com```<br>
