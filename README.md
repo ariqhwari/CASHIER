@@ -32,7 +32,20 @@ Password : ```faris123```
 E-mail : ```budi@gmail.com```<br>
 Password : ```budi123```
 
-## MENU UTAMA
-```
+<div align="center">
+  
+## WEBSITE VIEW
 
-```
+### Login
+![Halooo](https://github.com/ariqhwari/Tugas-1-pemweb/blob/main/img/login.png)
+### Home-Page Cashier/User
+![Halooo](https://github.com/ariqhwari/Tugas-1-pemweb/blob/main/img/Cashierindex.png)
+### Checkout-OrderDetail Cashier/User
+![Halooo](https://github.com/ariqhwari/Tugas-1-pemweb/blob/main/img/orderdetail.png)
+### Order WareHouse/Admin
+![Halooo](https://github.com/ariqhwari/Tugas-1-pemweb/blob/main/img/orders.png)
+### Product WareHouse/Admin
+![Halooo](https://github.com/ariqhwari/Tugas-1-pemweb/blob/main/img/product.png)
+
+
+</div>
